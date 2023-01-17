@@ -1,7 +1,17 @@
 :root {
-  --coffee-clr: #753422;
+  --coffee-clr: #986b4b;
   --bgclr-light: #ffebc9;
+  --bgclr-dark: #4f2c12;
+  --font-cabin: "Cabin Sketch", cursive;
+  --font-grotesque: "Darker Grotesque", sans-serif;
+  --font-henny: "Henny Penny", cursive;
+  --font-splash: "Splash", cursive;
 }
+
+/* font-family: 'Cabin Sketch', cursive;
+font-family: 'Darker Grotesque', sans-serif;
+font-family: 'Henny Penny', cursive;
+font-family: 'Splash', cursive; */
 
 * {
   margin: 0;
@@ -14,6 +24,32 @@ body {
   overflow-x: hidden;
   background-color: var(--bgclr-light);
 }
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+  display: none;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px var(--coffee-clr);
+  /* display: none; */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--coffee-clr);
+  border-radius: 90px;
+}
+
+#brand-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  font-size: min(10vw, 4rem);
+  color: var(--bgclr-dark);
+  font-family: var(--font-splash);
+  text-shadow: 5px 5px 5px var(--coffee-clr);
+}
+
 #landing-section {
   position: relative;
   width: 100%;
@@ -28,7 +64,7 @@ body {
   left: 50%;
   overflow: visible;
   transition: transform 1s;
-  transform: translateY(-130px);
+  transform: translate(-60%, -120%);
   z-index: 2;
   height: 7vw;
   width: 7vw;
@@ -75,11 +111,11 @@ body {
 #coffee-puddle {
   position: absolute;
   width: 35vw;
-  bottom: -20px;
+  bottom: -30px;
   right: -2%;
-  z-index: 1;
+  z-index: -100;
   opacity: 0;
-  transition: 2s opacity ease;
+  transition: 3s opacity ease-out;
 }
 
 #coffee-puddle.active {
@@ -96,11 +132,15 @@ body {
   fill: var(--coffee-clr);
 }
 
+#coffee-flow-section {
+  position: relative;
+}
+
 #coffee-flow-container {
   position: relative;
   width: 100%;
   height: 100%;
-  z-index: -90;
+  z-index: -100;
 }
 
 #coffee-flow {
@@ -115,11 +155,107 @@ body {
 #coffee-flow-mask {
   position: fixed;
   bottom: 0;
-  z-index: -10;
+  z-index: -20;
   width: 100%;
   height: 60vh;
   background-color: var(--bgclr-light);
   box-shadow: 0 0 15px 15px var(--bgclr-light);
+}
+
+.product-cards-container {
+  position: absolute;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-top: 4rem;
+}
+
+.product-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50vw;
+  padding-inline: 10%;
+}
+.product-cards-container .product-card:nth-child(odd) {
+  flex-direction: row;
+}
+
+.product-cards-container .product-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.product-card > .image-container {
+  width: 18%;
+}
+
+.product-card > .details-container {
+  width: 82%;
+}
+
+.product-card > .image-container > img {
+  max-width: 100%;
+  transition: all 0.5s ease;
+  filter: drop-shadow(0px 0px 5px black);
+}
+
+.product-card:hover > .image-container > img {
+  filter: drop-shadow(8px 8px 8px black);
+}
+
+.product-cards-container .product-card:nth-child(odd) > .details-container {
+  padding-left: 2rem;
+}
+
+.product-cards-container .product-card:nth-child(even) > .details-container {
+  padding-right: 2rem;
+}
+
+.product-cards-container
+  .product-card:nth-child(odd):hover
+  > .image-container
+  > img {
+  transform: scale(1.3) rotate(+10deg);
+}
+
+.product-cards-container
+  .product-card:nth-child(even):hover
+  > .image-container
+  > img {
+  transform: scale(1.2) rotate(-10deg);
+}
+
+.coffee-name {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: var(--font-cabin);
+  color: var(--bgclr-dark);
+  text-shadow: 0 0 10px white;
+}
+
+.coffee-about {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--font-grotesque);
+}
+
+.takeaway-cup-container {
+  position: absolute;
+  width: 18vw;
+  bottom: -20vw;
+  left: 13vw;
+}
+.takeaway-cup-container > img {
+  max-width: 100%;
+  transform: rotate(10deg);
+  filter: drop-shadow(5px 5px 10px black);
+}
+
+footer {
+  height: 70vh;
+  width: 100vw;
+  background: var(--bgclr-dark);
 }
 
 @keyframes drop {

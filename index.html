@@ -7,11 +7,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bean Sleepy</title>
         <link rel="stylesheet" href="./styles/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Darker+Grotesque:wght@400;500;600;700&family=Henny+Penny&family=Splash&display=swap"
+            rel="stylesheet">
         <script defer src="./scripts/script.js"></script>
+
     </head>
 
     <body>
         <section id="landing-section"> <!--landing page with coffee spill-->
+            <h1 id="brand-title">Bean Sleepy</h1>
             <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
                 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -193,6 +200,7 @@
             </svg>
 
 
+
             <!--puddle svg-->
             <svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
                 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg"
@@ -372,10 +380,95 @@
                     </rdf:RDF>
                 </metadata>
             </svg>
-
         </section>
-        <section id="coffe-flow-section">
+        <section id="coffee-flow-section">
             <div id="coffee-flow-mask"></div>
+
+            <div class="product-cards-container">
+                <div id="nescafe-regular" class="product-card">
+                    <div class="image-container">
+                        <img src="./assets/images/nescafe_regular.png" alt="nescafe-regular">
+                    </div>
+                    <div class="details-container">
+                        <div class="coffee-name">Nescafe Classic</div>
+                        <div class="coffee-about">The unmistakable full-flavour of Nescafe Classic is what makes our
+                            signature coffee so loved all over the world. Savour the wonderfully rich and refreshing
+                            aroma of this medium-dark roast.</div>
+                    </div>
+                </div>
+                <div id="nescafe-espresso" class="product-card">
+                    <div class="image-container">
+                        <img src="./assets/images/nescafe_espresso.png" alt="nescafe-espresso">
+                    </div>
+                    <div class="details-container">
+                        <div class="coffee-name">Nescafe Espresso</div>
+                        <div class="coffee-about">Elevate your coffee game with Nescafe Espresso. This premium instant
+                            coffee is made from high-quality, responsibly sourced coffee beans that are expertly roasted
+                            and ground to perfection. Each sip delivers a bold, rich and full-bodied espresso flavor,
+                            with a distinct aroma that will wake up your senses. Try it today and taste the difference.
+                        </div>
+                    </div>
+                </div>
+                <div id="nescafe-gold" class="product-card">
+                    <div class="image-container">
+                        <img src="./assets/images/nescafe_gold.png" alt="nescafe-gold">
+                    </div>
+                    <div class="details-container">
+                        <div class="coffee-name">Nescafe Gold Intense</div>
+                        <div class="coffee-about">The unmistakable full-flavour of NESCAFÉ® Classic is what makes our
+                            signature coffee so loved all over the world. Savour the wonderfully rich and refreshing
+                            aroma of this medium-dark roast.</div>
+                    </div>
+                </div>
+                <div id="nescafe-original" class="product-card">
+                    <div class="image-container">
+                        <img src="./assets/images/nescafe_original.png" alt="nescafe-original">
+                    </div>
+                    <div class="details-container">
+                        <div class="coffee-name">Nescafe Original</div>
+                        <div class="coffee-about">The unmistakable full-flavour of NESCAFÉ® Classic is what makes our
+                            signature coffee so loved all over the world. Savour the wonderfully rich and refreshing
+                            aroma of this medium-dark roast.</div>
+                    </div>
+                </div>
+                <div id="nescafe-gold-soluble" class="product-card">
+                    <div class="image-container">
+                        <img src="./assets/images/nescafe_gold_soluble.png" alt="nescafe-gold-soluble">
+                    </div>
+                    <div class="details-container">
+                        <div class="coffee-name">Nescafe Gold Blend</div>
+                        <div class="coffee-about">Introducing Nescafe Gold, the premium instant coffee experience. Made
+                            with only the finest, expertly roasted and ground coffee beans, Nescafe Gold delivers a
+                            rich, smooth and full-bodied flavor that will elevate your morning cup of coffee to the next
+                            level. Whether you're in a hurry or taking a moment to relax,
+                            Nescafe Gold is the perfect choice for coffee lovers everywhere. Try it today and experience
+                            the difference.</div>
+                    </div>
+                </div>
+                <div id="nescafe-small" class="product-card">
+                    <div class="image-container">
+                        <img src="./assets/images/nescafe_small.png" alt="nescafe-small">
+                    </div>
+                    <div class="details-container">
+                        <div class="coffee-name">Nescafe Classic Small</div>
+                        <div class="coffee-about">The unmistakable full-flavour of NESCAFÉ® Classic is what makes our
+                            signature coffee so loved all over the world. Savour the wonderfully rich and refreshing
+                            aroma of this medium-dark roast. Try it now in a smaller and more portable package.</div>
+                    </div>
+                </div>
+                <div id="nescafe-taster" class="product-card">
+                    <div class="image-container">
+                        <img src="./assets/images/nescafe_taster.png" alt="nescafe-taster">
+                    </div>
+                    <div class="details-container">
+                        <div class="coffee-name">Nescafe Regular</div>
+                        <div class="coffee-about">The unmistakable full-flavour of NESCAFÉ® Classic is what makes our
+                            signature coffee so loved all over the world. Savour the wonderfully rich and refreshing
+                            aroma of this medium-dark roast.</div>
+                    </div>
+                </div>
+            </div>
+
             <div id="coffee-flow-container" class="">
                 <svg width="208.5416mm" height="765.14893mm" viewBox="0 0 208.5416 765.14892" version="1.1"
                     id="coffee-flow" inkscape:export-filename="coffee-flow-2.svg" inkscape:export-xdpi="96"
@@ -395,8 +488,11 @@
                     </g>
                 </svg>
             </div>
+            <div class="takeaway-cup-container">
+                <img src="./assets/images/takeaway-cup2.png" alt="takeaway-cup">
+            </div>
         </section>
-
+        <footer></footer>
     </body>
 
 </html>
