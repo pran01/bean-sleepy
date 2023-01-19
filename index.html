@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bean Sleepy</title>
+        <link href='https://css.gg/css' rel='stylesheet'>
         <link rel="stylesheet" href="./styles/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -385,7 +386,7 @@
             <div id="coffee-flow-mask"></div>
 
             <div class="product-cards-container">
-                <div id="nescafe-regular" class="product-card">
+                <div id="nescafe-regular" class="product-card" onclick="gotoNescafeClassic()">
                     <div class="image-container">
                         <img src="./assets/images/nescafe_regular.png" alt="nescafe-regular">
                     </div>
@@ -461,10 +462,11 @@
                         <img src="./assets/images/nescafe_taster.png" alt="nescafe-taster">
                     </div>
                     <div class="details-container">
-                        <div class="coffee-name">Nescafe Regular</div>
-                        <div class="coffee-about">The unmistakable full-flavour of NESCAFÉ® Classic is what makes our
-                            signature coffee so loved all over the world. Savour the wonderfully rich and refreshing
-                            aroma of this medium-dark roast.</div>
+                        <div class="coffee-name">Nescafe Taster's Choice</div>
+                        <div class="coffee-about">Start your day off right with a delicious cup of NESCAFÉ Taster's
+                            Choice! Made from 100% pure, responsibly-sourced coffee beans, our instant coffee is perfect
+                            for busy mornings or on-the-go. Try it today and
+                            experience the rich, satisfying flavor of real coffee in an instant</div>
                     </div>
                 </div>
             </div>
@@ -491,8 +493,49 @@
             <div class="takeaway-cup-container">
                 <img src="./assets/images/takeaway-cup2.png" alt="takeaway-cup">
             </div>
+            <div id="explore-btn-container">
+                <div id="explore-btn">
+                    <div id="drop-1" class=""></div>
+                    <div id="coffee-fill" class=""></div>
+                    <img src="./assets/images/White-Coffee-Mug.png" alt="white coffee mug" />
+                    <div id="drop-2" class=""></div>
+                    <div id="drop-3" class=""></div>
+                    <div id="drop-4" class=""></div>
+                    <span>Explore our range</span>
+                </div>
+            </div>
         </section>
-        <footer></footer>
+        <footer>
+            <button id="scroll-btn" onclick="scrollToTop()"><i class="gg-chevron-double-up-o"></i></button>
+            <div id="footer-brand-title">Bean Sleepy</div>
+            <div id="social-links">
+                <span>connect with us:</span>
+                <div class="link-group">
+                    <i class="gg-instagram"></i><span>@bean.sleepy</span>
+                </div>
+                <div class="link-group">
+                    <i class="gg-facebook"></i><span>@beansleepy-fb</span>
+                </div>
+                <div class="link-group">
+                    <i class="gg-mail"></i><span>support@beansleepy.com</span>
+                </div>
+                <div class="link-group">
+                    <i class="gg-smartphone"></i><span>+919876543210</span>
+                </div>
+            </div>
+            <div id="office-location">
+                <span>Meet us at:</span>
+                <div class="address">
+                    Bean Street, <br />
+                    Roast Town, <br />
+                    Coffeeville 12345
+                </div>
+            </div>
+            <div id="creator-info">
+                Designed and made by <a href="https://pran01.github.io/about-me" target="_blank"> Pranav
+                </a>
+            </div>
+        </footer>
     </body>
 
 </html>

@@ -1,0 +1,50 @@
+:root {
+  --coffee-clr: #986b4b;
+  --bgclr-light: #ffebc9;
+  --bgclr-dark: #4f2c12;
+  --font-cabin: "Cabin Sketch", cursive;
+  --font-grotesque: "Darker Grotesque", sans-serif;
+  --font-henny: "Henny Penny", cursive;
+  --font-splash: "Splash", cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bgclr-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+span {
+  font-size: min(8vw, 3rem);
+  font-family: var(--font-henny);
+  font-weight: 600;
+  color: var(--bgclr-dark);
+}
+
+img {
+  width: 10rem;
+}
+
+a {
+  text-decoration: none;
+  width: 8rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: var(--bgclr-dark);
+  border: 2px solid var(--bgclr-dark);
+  border-radius: 50px;
+  font-family: var(--font-grotesque);
+  font-weight: 700;
+}
