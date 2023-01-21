@@ -16,6 +16,8 @@ const info = document.querySelector("#info");
 const info1 = document.querySelector("#info1");
 const info2 = document.querySelector("#info2");
 const info3 = document.querySelector("#info3");
+const addBtn = document.querySelector("#add-cart-btn");
+const outStockBtn = document.querySelector("#out-stock-btn");
 
 const grabBottle = () => {
   hand.style.display = "block";
@@ -109,6 +111,11 @@ const deactivate = (num) => {
   }
 };
 
+const addToCart = () => {
+  addBtn.style.display = "none";
+  outStockBtn.style.display = "block";
+};
+
 bottle.addEventListener("click", grabBottle);
 bean1.addEventListener("mouseover", () => activate(1));
 bean1.addEventListener("mouseout", () => deactivate(1));
@@ -118,3 +125,5 @@ bean2.addEventListener("mouseout", () => deactivate(2));
 
 bean3.addEventListener("mouseover", () => activate(3));
 bean3.addEventListener("mouseout", () => deactivate(3));
+
+addBtn.addEventListener("click", addToCart);

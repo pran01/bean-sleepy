@@ -87,7 +87,7 @@ body {
   max-height: 70%;
 }
 #selling-points > div span {
-  font-size: small;
+  font-size: 1vw;
 }
 
 #buying-options {
@@ -130,7 +130,22 @@ body {
   color: var(--bgclr-dark);
   font-family: var(--font-grotesque);
   border: none;
-  font-size: large;
+  font-size: 1.5vw;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+#out-stock-btn {
+  display: none;
+  width: 40%;
+  height: 3vw;
+  align-self: center;
+  border-radius: 10px;
+  background-color: gray;
+  color: var(--bgclr-light);
+  font-family: var(--font-grotesque);
+  border: none;
+  font-size: 1.5vw;
   font-weight: bolder;
   cursor: pointer;
 }
@@ -253,7 +268,10 @@ body {
 
 .info-title {
   font-weight: bold;
-  font-size: large;
+  font-size: 2vw;
+}
+.info-detail {
+  font-size: 1.6vw;
 }
 
 .bubble-dot {
@@ -306,7 +324,7 @@ body {
 
 #for-bottle {
   font-family: var(--font-grotesque);
-  font-size: 3rem;
+  font-size: 4vw;
   font-weight: 700;
   color: var(--coffee-clr);
   animation: opacity 3s infinite;
@@ -314,7 +332,7 @@ body {
 }
 #for-beans {
   font-family: var(--font-grotesque);
-  font-size: 3rem;
+  font-size: 4vw;
   font-weight: 700;
   color: var(--coffee-clr);
   animation: opacity 3s infinite;
