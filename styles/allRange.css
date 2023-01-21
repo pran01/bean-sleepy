@@ -1,6 +1,6 @@
 :root {
   --coffee-clr: #986b4b;
-  --bgclr-light: #ffebc9;
+  --bgclr-light: #fff5e2;
   --bgclr-dark: #4f2c12;
   --font-cabin: "Cabin Sketch", cursive;
   --font-grotesque: "Darker Grotesque", sans-serif;
@@ -18,33 +18,97 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: var(--bgclr-light);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body::-webkit-scrollbar-track {
+  display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+#product-cards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1vw;
+  background-color: var(--bgclr-light);
+}
+
+.product-card {
+  width: 15rem;
+  height: 20rem;
+  background-color: var(--coffee-clr);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 5px var(--bgclr-dark);
+  cursor: pointer;
+}
+
+.product-card:hover .image-container img {
+  filter: drop-shadow(0px 0px 20px black);
+  transform: scale(1.3);
+}
+.product-card:hover .title {
+  text-shadow: 0px 0px 5px black;
+}
+
+.image-container {
+  width: 10rem;
+  height: 10rem;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-span {
-  font-size: min(8vw, 3rem);
-  font-family: var(--font-henny);
-  font-weight: 600;
-  color: var(--bgclr-dark);
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  filter: drop-shadow(10px 10px 2px black);
+  transition: all 0.5s ease;
 }
 
-img {
-  width: 10rem;
+.title {
+  font-size: min(3vw, 1.5rem);
+  text-align: center;
+  color: var(--bgclr-light);
+  font-family: var(--font-cabin);
+  width: 80%;
 }
 
-a {
-  text-decoration: none;
-  width: 8rem;
-  height: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  color: var(--bgclr-dark);
-  border: 2px solid var(--bgclr-dark);
-  border-radius: 50px;
-  font-family: var(--font-grotesque);
-  font-weight: 700;
+@media screen and (300px<width<=500px) {
+  .product-card {
+    width: 8rem;
+    height: 12rem;
+  }
+  .image-container {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (width<=300px) {
+  .product-card {
+    width: 5rem;
+    height: 10rem;
+  }
+  .image-container {
+    width: 4rem;
+    height: 4rem;
+  }
+  .image-container img {
+    filter: drop-shadow(2px 2px 2px black);
+  }
 }
