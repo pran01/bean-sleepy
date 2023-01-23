@@ -286,7 +286,7 @@ body {
   transition: transform 0.5s ease;
   font-family: var(--font-grotesque);
   color: var(--bgclr-light);
-  top: 0;
+  top: 5%;
   right: 30%;
   width: 20%;
   height: 30%;
