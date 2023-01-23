@@ -5,6 +5,7 @@ const drop3 = document.querySelector("#drop-3");
 const drop4 = document.querySelector("#drop-4");
 const coffeeFill = document.querySelector("#coffee-fill");
 const exploreText = document.querySelector("#explore-btn>span");
+const loader = document.querySelector("#loader-section");
 
 window.addEventListener(
   "scroll",
@@ -48,6 +49,16 @@ exploreBtn.addEventListener("click", () => {
   }, 5000);
 });
 
+const removeLoader = () => {
+  setTimeout(() => {
+    loader.style.display = "none";
+    let allSections = document.querySelectorAll("body>section");
+    allSections.forEach((section) => (section.style.display = "block"));
+    let footer = document.querySelector("footer");
+    footer.style.display = "block";
+  }, 3000);
+};
+
 const revealPuddle = () => {
   let puddle = document.querySelector("#coffee-puddle");
   let puddleTop = puddle.getBoundingClientRect().top; //gets distance from top of viewport
@@ -88,3 +99,5 @@ const gotoClassicSm = () => {
 const gotoTaster = () => {
   window.location = "/nescafeTasters.html";
 };
+
+window.onload = removeLoader;

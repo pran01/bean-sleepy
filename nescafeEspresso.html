@@ -6,6 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Nescafe Classic</title>
+        <link rel="icon" type="image/xicon" href="./assets/images/favicon.ico">
+
         <link href='https://css.gg/css' rel='stylesheet'>
         <link rel="stylesheet" href="./styles/nescafeClassic.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +20,16 @@
     </head>
 
     <body>
+        <section id="navigation-section">
+            <button id="back-btn" onclick="history.back()">
+                <i class="fa-solid fa-caret-left"></i>
+                Go Back
+            </button>
+            <button id="home-btn" onclick="window.location='/'">
+                <i class="fa-solid fa-house"></i>
+                Go to home
+            </button>
+        </section>
         <section id="image-heap-container">
             <div id="details-bg">
                 <div id="details">
