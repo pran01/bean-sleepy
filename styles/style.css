@@ -84,7 +84,7 @@ body::-webkit-scrollbar-thumb {
   left: 50%;
   overflow: visible;
   transition: transform 1s;
-  transform: translate(-60%, -120%);
+  transform: translate(-60%, -160%);
   z-index: 2;
   height: 7vw;
   width: 7vw;
@@ -131,7 +131,7 @@ body::-webkit-scrollbar-thumb {
 #coffee-puddle {
   position: absolute;
   width: 35vw;
-  bottom: -30px;
+  bottom: -35px;
   right: -2%;
   z-index: -100;
   opacity: 0;
@@ -528,7 +528,7 @@ footer {
   }
 }
 
-@media screen and (width<=600px) {
+/* @media screen and (width<=600px) {
   #office-location {
     left: 10%;
   }
@@ -541,9 +541,15 @@ footer {
   #coffee-puddle {
     bottom: -12px;
   }
-}
+} */
 
 @media screen and (width <= 400px) {
+  #office-location {
+    left: 10%;
+  }
+  .gg-chevron-double-up-o {
+    transform: scale(1);
+  }
   #cup-svg {
     transform: translate(-60%, -170%);
   }
@@ -559,6 +565,12 @@ footer {
 }
 
 @media screen and (400px < width <= 700px) {
+  #office-location {
+    left: 10%;
+  }
+  .gg-chevron-double-up-o {
+    transform: scale(1);
+  }
   #cup-svg {
     transform: translate(-60%, -150%);
   }
@@ -572,7 +584,7 @@ footer {
 
 @media screen and (700px < width <= 1050px) {
   #cup-svg {
-    transform: translate(-60%, -130%);
+    transform: translate(-60%, -170%);
   }
   #coffee-puddle {
     bottom: -19px;
